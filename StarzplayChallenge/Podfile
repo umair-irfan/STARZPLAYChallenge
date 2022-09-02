@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'StarzplayChallenge' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for StarzplayChallenge
+pod 'Alamofire'
+
+  target 'StarzplayChallengeTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'StarzplayChallengeUITests' do
+    # Pods for testing
+  end
+
+end

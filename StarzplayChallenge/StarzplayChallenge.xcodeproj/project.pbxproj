@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5107A04A510690AD5D3AB724 /* Pods_StarzplayChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A608240EF5F40C7C4520DA79 /* Pods_StarzplayChallengeTests.framework */; };
 		7C11B81628C0E06F0066EE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81528C0E06F0066EE64 /* AppDelegate.swift */; };
 		7C11B81828C0E06F0066EE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */; };
 		7C11B81A28C0E06F0066EE64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81928C0E06F0066EE64 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		7C11B82D28C0E0710066EE64 /* StarzplayChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B82C28C0E0710066EE64 /* StarzplayChallengeTests.swift */; };
 		7C11B83728C0E0710066EE64 /* StarzplayChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B83628C0E0710066EE64 /* StarzplayChallengeUITests.swift */; };
 		7C11B83928C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B83828C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift */; };
+		957FBEC3BF3250BB044502DA /* Pods_StarzplayChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DA3ECDFB768AA6CE09CFF3 /* Pods_StarzplayChallenge.framework */; };
+		AA6695B6282DF48FB6108052 /* Pods_StarzplayChallenge_StarzplayChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4DA0E8EFDF1CEC7BC81CFE4 /* Pods_StarzplayChallenge_StarzplayChallengeUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06D55D1519D0EAD37DCF60BE /* Pods-StarzplayChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-StarzplayChallengeTests/Pods-StarzplayChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		1DE2CC78549FF0E926E60593 /* Pods-StarzplayChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-StarzplayChallengeTests/Pods-StarzplayChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6958629705A4C2FF2BAEC8CD /* Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7C11B81228C0E06F0066EE64 /* StarzplayChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarzplayChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11B81528C0E06F0066EE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		7C11B83228C0E0710066EE64 /* StarzplayChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarzplayChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11B83628C0E0710066EE64 /* StarzplayChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarzplayChallengeUITests.swift; sourceTree = "<group>"; };
 		7C11B83828C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarzplayChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		88187E52B8170C27BE29E9FE /* Pods-StarzplayChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallenge.debug.xcconfig"; path = "Target Support Files/Pods-StarzplayChallenge/Pods-StarzplayChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		9F3D35428D43B678910CBA32 /* Pods-StarzplayChallenge-StarzplayChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallenge-StarzplayChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A608240EF5F40C7C4520DA79 /* Pods_StarzplayChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarzplayChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B815BD0800C359FCBEF6BC35 /* Pods-StarzplayChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallenge.release.xcconfig"; path = "Target Support Files/Pods-StarzplayChallenge/Pods-StarzplayChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		C7DA3ECDFB768AA6CE09CFF3 /* Pods_StarzplayChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarzplayChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4DA0E8EFDF1CEC7BC81CFE4 /* Pods_StarzplayChallenge_StarzplayChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarzplayChallenge_StarzplayChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				957FBEC3BF3250BB044502DA /* Pods_StarzplayChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5107A04A510690AD5D3AB724 /* Pods_StarzplayChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6695B6282DF48FB6108052 /* Pods_StarzplayChallenge_StarzplayChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C687F430C443BE37C0B1DE0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88187E52B8170C27BE29E9FE /* Pods-StarzplayChallenge.debug.xcconfig */,
+				B815BD0800C359FCBEF6BC35 /* Pods-StarzplayChallenge.release.xcconfig */,
+				6958629705A4C2FF2BAEC8CD /* Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig */,
+				9F3D35428D43B678910CBA32 /* Pods-StarzplayChallenge-StarzplayChallengeUITests.release.xcconfig */,
+				1DE2CC78549FF0E926E60593 /* Pods-StarzplayChallengeTests.debug.xcconfig */,
+				06D55D1519D0EAD37DCF60BE /* Pods-StarzplayChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C11B80928C0E06F0066EE64 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +112,8 @@
 				7C11B82B28C0E0710066EE64 /* StarzplayChallengeTests */,
 				7C11B83528C0E0710066EE64 /* StarzplayChallengeUITests */,
 				7C11B81328C0E06F0066EE64 /* Products */,
+				2C687F430C443BE37C0B1DE0 /* Pods */,
+				AAD905B8FFB7A257470F7C07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +158,16 @@
 			path = StarzplayChallengeUITests;
 			sourceTree = "<group>";
 		};
+		AAD905B8FFB7A257470F7C07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C7DA3ECDFB768AA6CE09CFF3 /* Pods_StarzplayChallenge.framework */,
+				F4DA0E8EFDF1CEC7BC81CFE4 /* Pods_StarzplayChallenge_StarzplayChallengeUITests.framework */,
+				A608240EF5F40C7C4520DA79 /* Pods_StarzplayChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11B83C28C0E0710066EE64 /* Build configuration list for PBXNativeTarget "StarzplayChallenge" */;
 			buildPhases = (
+				DC52D619FEBA5FA4BEE2428A /* [CP] Check Pods Manifest.lock */,
 				7C11B80E28C0E06F0066EE64 /* Sources */,
 				7C11B80F28C0E06F0066EE64 /* Frameworks */,
 				7C11B81028C0E06F0066EE64 /* Resources */,
+				9F07F0CF1ADD4367EABAC755 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11B83F28C0E0710066EE64 /* Build configuration list for PBXNativeTarget "StarzplayChallengeTests" */;
 			buildPhases = (
+				FBB8B6A9EDB81912597DE772 /* [CP] Check Pods Manifest.lock */,
 				7C11B82428C0E0710066EE64 /* Sources */,
 				7C11B82528C0E0710066EE64 /* Frameworks */,
 				7C11B82628C0E0710066EE64 /* Resources */,
@@ -169,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C11B84228C0E0710066EE64 /* Build configuration list for PBXNativeTarget "StarzplayChallengeUITests" */;
 			buildPhases = (
+				F5A251E537D7BD1C8D3E8CB7 /* [CP] Check Pods Manifest.lock */,
 				7C11B82E28C0E0710066EE64 /* Sources */,
 				7C11B82F28C0E0710066EE64 /* Frameworks */,
 				7C11B83028C0E0710066EE64 /* Resources */,
+				233504338E20FB2E568ECFA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		233504338E20FB2E568ECFA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F07F0CF1ADD4367EABAC755 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge/Pods-StarzplayChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge/Pods-StarzplayChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StarzplayChallenge/Pods-StarzplayChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC52D619FEBA5FA4BEE2428A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarzplayChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5A251E537D7BD1C8D3E8CB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarzplayChallenge-StarzplayChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBB8B6A9EDB81912597DE772 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StarzplayChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C11B80E28C0E06F0066EE64 /* Sources */ = {
@@ -432,6 +581,7 @@
 		};
 		7C11B83D28C0E0710066EE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88187E52B8170C27BE29E9FE /* Pods-StarzplayChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,6 +613,7 @@
 		};
 		7C11B83E28C0E0710066EE64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B815BD0800C359FCBEF6BC35 /* Pods-StarzplayChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -494,6 +645,7 @@
 		};
 		7C11B84028C0E0710066EE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DE2CC78549FF0E926E60593 /* Pods-StarzplayChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +666,7 @@
 		};
 		7C11B84128C0E0710066EE64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06D55D1519D0EAD37DCF60BE /* Pods-StarzplayChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -534,6 +687,7 @@
 		};
 		7C11B84328C0E0710066EE64 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6958629705A4C2FF2BAEC8CD /* Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -552,6 +706,7 @@
 		};
 		7C11B84428C0E0710066EE64 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9F3D35428D43B678910CBA32 /* Pods-StarzplayChallenge-StarzplayChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
