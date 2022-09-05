@@ -7,19 +7,21 @@
 
 import Foundation
 
-
-struct DevelopmentServer {
-    static var host = "developers.themoviedb.org/3"
+struct Keys: Codable {
+    static var movieDb = Bundle.main.object(forInfoDictionaryKey: "api_key") as! String
 }
 
-public protocol URLRequestConvertible {
+struct DevelopmentServer {
+    static var host = "api.themoviedb.org"
+}
+
+public protocol URLRequestConverted {
     func urlRequest()  -> URLRequest?
 }
 
-enum Router<T>: URLRequestConvertible {
+enum Router<T>: URLRequestConverted {
     
-    case getTVShows(T)
-    case getSeasons(T)
+    case discoverTVShows(T)
     case getTVShowDetails(T)
     case getSeasonDetails(T)
     case getEpisodeDetails(T)
@@ -28,24 +30,20 @@ enum Router<T>: URLRequestConvertible {
     
     private var scheme: String {
         switch self {
-        case .getTVShows, .getSeasons, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
+        case .discoverTVShows, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
             return "https"
         }
     }
     private var host: String {
         switch self {
-        case .getTVShows, .getSeasons, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
+        case .discoverTVShows, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
             return DevelopmentServer.host
         }
     }
     private var path: String {
         switch self {
-        case .getTVShows:
-            //MARK:- Fix request endpoint
-            return  "/tv/62852?=3d0cda4466f269e793e9283f6ce0b75e"
-        case .getSeasons:
-            //MARK:- Fix request endpoint
-            return  "/tv"
+        case .discoverTVShows:
+            return "/3/discover/tv"
         case .getTVShowDetails:
             //MARK:- Fix request endpoint
             return  "/tv"
@@ -60,20 +58,15 @@ enum Router<T>: URLRequestConvertible {
     }
     private var method: String {
         switch self {
-        case .getTVShows, .getSeasons, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
+        case .discoverTVShows, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
             return "GET"
         }
     }
     private var queryParameters: [URLQueryItem]? {
         switch self {
-        case .getTVShows(let params):
-            let request = params as! TVShowRequest
-            return [URLQueryItem(name: "api_key", value: String(request.language)),
-                    URLQueryItem(name: "since", value: String(request.since))]
-        case .getSeasons(let params):
-            let request = params as! SeasonRequest
-            return [URLQueryItem(name: "language", value: String(request.language)),
-                    URLQueryItem(name: "since", value: String(request.since))]
+        case .discoverTVShows:
+            return [URLQueryItem(name: "api_key", value: String(Keys.movieDb))]
+            
         case .getTVShowDetails(let params):
             //MARK:- Fix request type
             let request = params as! TVShowRequest
@@ -105,6 +98,7 @@ enum Router<T>: URLRequestConvertible {
             assert(true,"url not formed")
             return nil
         }
+        
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = self.method
         

@@ -8,24 +8,23 @@
 import Foundation
 
 protocol TVShowServiceType {
-    func fetchTVShows(for language:String, period:String, completion: @escaping(Result<TVShow?,AppError>) -> Void)
+    func fetchTVShows(completion: @escaping(Result<TV?,AppError>) -> Void)
 }
 
-class TVShowService: TVShowServiceType {
+class TVShowService:ApiClient, TVShowServiceType {
     
-    private let apiConvertible: ApiService = ApiClient()
-    
-    func fetchTVShows(for language:String, period:String, completion: @escaping(Result<TVShow?,AppError>) -> Void) {
-        
-        let request = TVShowRequest(since: period, language: language)
-        let router = Router.getTVShows(request)
-        apiConvertible.request(router: router) { (result:Result<TVShow, AppError>) in
+    func fetchTVShows(completion: @escaping(Result<TV?,AppError>) -> Void) {
+        let router = Router.discoverTVShows(Int.self)
+        request(router: router) { (result:Result<TV, AppError>) in
             switch result{
             case .failure(let error):
+                //MARK:- Network Service Logs here
+                
                 completion(.failure(error))
             case .success(let data):
-                completion(.success(data))
+                //MARK:- Network Service Logs here
                 
+                completion(.success(data))
             }
         }
     }

@@ -7,6 +7,13 @@
 
 import Foundation
 
-struct TVShow: Codable {
+struct TV: Codable {
+    let page: Int
+    let shows: [Show]?
+    let totalPages: Int
+    let totalResults: Int
+}
+
+struct Show: Codable {
     
 }

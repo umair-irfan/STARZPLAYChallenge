@@ -9,29 +9,37 @@ import Foundation
 import Alamofire
 
 protocol ApiService {
-    func request<T:Codable>(router: URLRequestConvertible, onCompletion: @escaping (Result<T,AppError>) -> Void)
+    func request<T:Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void)
 }
 
 class ApiClient {
     
-    private let session = Session(configuration: URLSessionConfiguration.af.default)
-    
-    func networkRequset(request : URLRequest?, completion:@escaping (Result<Data,AFError>) -> Void){
+    func networkRequset(request : URLRequest?, completion:@escaping (Result<Data,AppError>) -> Void){
+      
+        //MARK:- Validate URL
+        
+        guard let _ = request?.url else {
+            let error = AppError(error: "Not a valid Url")
+            completion(.failure(error))
+            return
+        }
+        
         //MARK:- Network Request
-        session.request(request!).validate().responseDecodable{ (response: DataResponse<Data, AFError>) in
+        
+        AF.request(request!).validate().responseDecodable{ (response: DataResponse<Data, AFError>) in
             switch response.result {
             case .success(let data):
                 completion(.success(data))
             case.failure(let error):
-                completion(.failure(error))
-                
+                let err = AppError(error: error.localizedDescription)
+                completion(.failure(err))
             }
         }
     }
 }
 
 extension ApiClient: ApiService {
-    public func request<T:Codable>(router: URLRequestConvertible, onCompletion: @escaping (Result<T,AppError>) -> Void) {
+    public func request<T:Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void) {
         
         //MARK:- Check Internet Conectivity
         
