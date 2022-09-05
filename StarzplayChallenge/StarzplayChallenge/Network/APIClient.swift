@@ -16,7 +16,7 @@ class ApiClient {
     
     func networkRequset(request : URLRequest?, completion:@escaping (Result<Data,AppError>) -> Void){
       
-        //MARK:- Validate URL
+        //MARK: Validate URL
         
         guard let url = request?.url else {
             let error = AppError(error: "Not a valid Url")
@@ -24,7 +24,7 @@ class ApiClient {
             return
         }
         
-        //MARK:- Network Request
+        //MARK: Network Request
         
         print(url)
         
@@ -44,7 +44,7 @@ class ApiClient {
 extension ApiClient: ApiService {
     public func request<T: Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void) {
         
-        //MARK:- Check Internet Conectivity
+        //MARK: Check Internet Conectivity
         
         if !Reachability.isConnectedToNetwork() {
             onCompletion(.failure(AppError(error: "Network Error", isNetworkError: true)))

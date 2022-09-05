@@ -9,7 +9,7 @@ import Foundation
 
 class NetworkService {
     
-    //MARK:- All Services goes here (eg: TV, Movies etc.)
+    //MARK: All Services goes here (eg: TV, Movies etc.)
     
     public lazy var television: TVShowServiceType = {
         return TVShowService()
