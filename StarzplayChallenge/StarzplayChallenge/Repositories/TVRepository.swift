@@ -12,6 +12,7 @@ protocol TVRepositoryType {
 }
 
 class TVRepository: NetworkService, TVRepositoryType {
+    public static var shared = TVRepository()
     func discoverTVShows(onCompletion: @escaping (Result<TV?, AppError>) -> ()) {
         television.fetchTVShows(completion: onCompletion)
     }

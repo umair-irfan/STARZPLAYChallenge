@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 protocol ApiService {
-    func request<T:Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void)
+    func request<T: Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void)
 }
 
 class ApiClient {
@@ -18,7 +18,7 @@ class ApiClient {
       
         //MARK:- Validate URL
         
-        guard let _ = request?.url else {
+        guard let url = request?.url else {
             let error = AppError(error: "Not a valid Url")
             completion(.failure(error))
             return
@@ -26,7 +26,10 @@ class ApiClient {
         
         //MARK:- Network Request
         
-        AF.request(request!).validate().responseDecodable{ (response: DataResponse<Data, AFError>) in
+        print(url)
+        
+        AF.request(request!).validate(statusCode: 200...299)
+            .responseData(completionHandler: { (response: AFDataResponse<Data>) in
             switch response.result {
             case .success(let data):
                 completion(.success(data))
@@ -34,12 +37,12 @@ class ApiClient {
                 let err = AppError(error: error.localizedDescription)
                 completion(.failure(err))
             }
-        }
+        })
     }
 }
 
 extension ApiClient: ApiService {
-    public func request<T:Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void) {
+    public func request<T: Codable>(router: URLRequestConverted, onCompletion: @escaping (Result<T,AppError>) -> Void) {
         
         //MARK:- Check Internet Conectivity
         
@@ -48,14 +51,14 @@ extension ApiClient: ApiService {
             return
         }
         
-        self.networkRequset(request: router.urlRequest()) { result in
+        self.networkRequset(request: router.urlRequest()) { (result: Result<Data, AppError>) in
             switch result {
             case .success(let data):
                 do {
                     let decode = try JSONDecoder().decode(T.self, from: data)
                     onCompletion(.success(decode))
-                }catch let error{
-                    onCompletion(.failure(AppError(error:error.localizedDescription)))
+                }catch {
+                    onCompletion(.failure(AppError(error: "Data Serailization Error")))
                 }
             case .failure(let error):
                 onCompletion(.failure(AppError(error:error.localizedDescription)))
