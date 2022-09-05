@@ -9,6 +9,7 @@ import Foundation
 
 protocol TVShowServiceType {
     func fetchTVShows(completion: @escaping(Result<TV?,AppError>) -> Void)
+    func fetchShowDetails(showId: Int, completion: @escaping(Result<ShowDetail?,AppError>) -> Void)
 }
 
 class TVShowService:ApiClient, TVShowServiceType {
@@ -28,4 +29,21 @@ class TVShowService:ApiClient, TVShowServiceType {
             }
         }
     }
+    
+    func fetchShowDetails(showId: Int, completion: @escaping (Result<ShowDetail?, AppError>) -> Void) {
+        let router = Router.getTVShowDetails(showId)
+        request(router: router) { (result:Result<ShowDetail, AppError>) in
+            switch result{
+            case .failure(let error):
+                //MARK: Network Service Logs here
+                
+                completion(.failure(error))
+            case .success(let data):
+                //MARK: Network Service Logs here
+                
+                completion(.success(data))
+            }
+        }
+    }
+    
 }

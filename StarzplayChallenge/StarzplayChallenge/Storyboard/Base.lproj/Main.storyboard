@@ -39,6 +39,36 @@
             </objects>
             <point key="canvasLocation" x="61" y="90"/>
         </scene>
+        <!--Show Detail View Controller-->
+        <scene sceneID="F1O-1p-p6R">
+            <objects>
+                <viewController storyboardIdentifier="TVShowDetailViewController" id="Ba7-OJ-CzM" customClass="TVShowDetailViewController" customModule="StarzplayChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tls-76-Wcd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xhB-mC-VQe">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hAy-sh-jGE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xhB-mC-VQe" firstAttribute="bottom" secondItem="hAy-sh-jGE" secondAttribute="bottom" id="8Vr-st-Edx"/>
+                            <constraint firstItem="xhB-mC-VQe" firstAttribute="trailing" secondItem="hAy-sh-jGE" secondAttribute="trailing" id="Afq-lx-836"/>
+                            <constraint firstItem="xhB-mC-VQe" firstAttribute="leading" secondItem="hAy-sh-jGE" secondAttribute="leading" id="gzM-4W-hKg"/>
+                            <constraint firstItem="xhB-mC-VQe" firstAttribute="top" secondItem="hAy-sh-jGE" secondAttribute="top" id="oVo-wn-9bM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailTableView" destination="xhB-mC-VQe" id="U2r-z0-aZY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mlZ-4c-Yt8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.00000000000011" y="89.732142857142847"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">

@@ -23,13 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         // MARK: Custom Entry point Initalize View-Model
         // MARK: Mock Dependency Injecetion
-        var viewModel: TVLisitingViewModelType = TVLisitingViewModel(with: TVRepository())
+        let repository: TVRepositoryType = TVRepository()
+        var viewModel: TVLisitingViewModelType = TVLisitingViewModel(with: repository)
         let viewController = TVListingViewController.initFrom(storyboard: .main)
         viewController.viewModel = viewModel
-        let navController = UINavigationController(rootViewController: viewController)
+        let navController = UINavigationControllerFactory.createTransparentNavigationBarNavigationController(rootViewController: viewController)
         
-        viewModel.navigateToDetailClosure = {
-            print($0.id)
+        viewModel.navigateToDetailClosure = { [weak self] in
+            guard let self = self else { return }
+            self.navigateToShowDetail(with: repository, show: $0, root: navController)
         }
         
         window?.rootViewController = navController
@@ -65,5 +67,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
+}
+
+extension SceneDelegate {
+    func navigateToShowDetail(with repo: TVRepositoryType, show: Show, root: UINavigationController){
+        let viewModel: TVShowDetailViewModelType = TVShowDetailViewModel(with: repo,show: show)
+        let viewController = TVShowDetailViewController.initFrom(storyboard: .main)
+        viewController.viewModel = viewModel
+        root.pushViewController(viewController, animated: true)
+    }
 }
 

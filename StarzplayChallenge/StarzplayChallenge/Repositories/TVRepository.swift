@@ -9,12 +9,16 @@ import Foundation
 
 protocol TVRepositoryType {
     func discoverTVShows(onCompletion: @escaping(Result<TV?, AppError>)->())
+    func fetchTVShowDetails(showId: Int, onCompletion: @escaping(Result<ShowDetail?, AppError>)->())
 }
 
 class TVRepository: NetworkService, TVRepositoryType {
     public static var shared = TVRepository()
     func discoverTVShows(onCompletion: @escaping (Result<TV?, AppError>) -> ()) {
         television.fetchTVShows(completion: onCompletion)
+    }
+    func fetchTVShowDetails(showId: Int, onCompletion: @escaping(Result<ShowDetail?, AppError>)->()){
+        television.fetchShowDetails(showId: showId, completion: onCompletion)
     }
 }
 
@@ -24,5 +28,9 @@ class TVRepository: NetworkService, TVRepositoryType {
 class MockTVRepository: TVRepositoryType {
     func discoverTVShows(onCompletion: @escaping (Result<TV?, AppError>) -> ()) {
         
+    }
+    
+    func fetchTVShowDetails(showId: Int, onCompletion: @escaping(Result<ShowDetail?, AppError>)->()){
+       
     }
 }
