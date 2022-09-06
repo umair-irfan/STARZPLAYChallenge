@@ -73,7 +73,7 @@ extension TVShowDetailViewModel {
     
     func tableViewNumberOfRowsForStaticSection()-> Int { 4 }
     
-    func tableViewNumberOfRowsForEpisodeSection()-> Int { 2 }
+    func tableViewNumberOfRowsForEpisodeSection()-> Int { 5 }
     
     func tableViewNumberOfSections()-> Int { 2 }
     

@@ -8,13 +8,15 @@
 import UIKit
 
 class SeasonsTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    @IBOutlet weak var seasonCollectionView: UICollectionView!
 
     //MARK: Properties
     var viewModel: SeasonsTableViewCellViewModelType!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        self.seasonCollectionView.register(UINib(nibName: "SeasonNameCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "SeasonNameCollectionViewCell")
     }
     
     // MARK: Initialization
@@ -38,6 +40,22 @@ class SeasonsTableViewCell: UITableViewCell, CellViewInitializable {
     
     func configure(with viewModel:SeasonsTableViewCellViewModelType) {
         self.viewModel = viewModel
-        //binding()
+        binding()
+    }
+    
+    func binding(){
+        seasonCollectionView.reloadData()
+    }
+}
+
+extension SeasonsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeasonNameCollectionViewCell", for: indexPath) as! SeasonNameCollectionViewCell
+       cell.configure(with: SeasonNameCollectionViewCellViewModel(with: "Season 1"))
+       return  cell
     }
 }
