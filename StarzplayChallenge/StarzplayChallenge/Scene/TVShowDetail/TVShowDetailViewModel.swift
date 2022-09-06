@@ -9,7 +9,9 @@ import Foundation
 
 protocol TVShowDetailViewModelType {
     func getScreenTitle() -> String
-    func tableViewNumberOfRows()-> Int
+    func tableViewNumberOfRowsForStaticSection()-> Int
+    func tableViewNumberOfRowsForEpisodeSection()-> Int
+    func tableViewNumberOfSections()-> Int
 //    func tableViewDidSelectRow(for indexPath: IndexPath)
 //    func requestTVShows()
 //    func generateCellViewModels()
@@ -17,6 +19,9 @@ protocol TVShowDetailViewModelType {
     func headerTableViewCellForRowAt(for indexPath: IndexPath) -> HeaderImageTableViewCellViewModelType?
     func buttonsTableViewCellForRowAt(for indexPath: IndexPath) -> PlayButtonsTableViewCellViewModelType?
     func descriptionTableViewCellForRowAt(for indexPath: IndexPath) -> DescriptionTableViewCellViewModelType?
+    func feedbackTableViewCellForRowAt(for indexPath: IndexPath) -> FeedbackButtonsTableViewCellViewModelType?
+    func seasonsTableViewCellForRowAt(for indexPath: IndexPath) -> SeasonsTableViewCellViewModelType?
+    func episodesTableViewCellForRowAt(for indexPath: IndexPath) -> EpisodesTableViewCellViewModelType?
 }
 
 class TVShowDetailViewModel: TVShowDetailViewModelType {
@@ -51,7 +56,26 @@ extension TVShowDetailViewModel {
         return descViewModel
     }
     
-    func tableViewNumberOfRows()-> Int { 3 }
+    func feedbackTableViewCellForRowAt(for indexPath: IndexPath) -> FeedbackButtonsTableViewCellViewModelType? {
+        let feedbackViewModel: FeedbackButtonsTableViewCellViewModelType = FeedbackButtonsTableViewCellViewModel()
+        return feedbackViewModel
+    }
+    
+    func seasonsTableViewCellForRowAt(for indexPath: IndexPath) -> SeasonsTableViewCellViewModelType? {
+        let seasonsViewModel: SeasonsTableViewCellViewModelType = SeasonsTableViewCellViewModel()
+        return seasonsViewModel
+    }
+    
+    func episodesTableViewCellForRowAt(for indexPath: IndexPath) -> EpisodesTableViewCellViewModelType? {
+        let episodesViewModel: EpisodesTableViewCellViewModelType = EpisodesTableViewCellViewModel()
+        return episodesViewModel
+    }
+    
+    func tableViewNumberOfRowsForStaticSection()-> Int { 4 }
+    
+    func tableViewNumberOfRowsForEpisodeSection()-> Int { 2 }
+    
+    func tableViewNumberOfSections()-> Int { 2 }
     
     func generateCellViewModels() {
         //cellViewModels = self.tvShows.compactMap { TVShowsTableViewCellViewModel(with: $0) }

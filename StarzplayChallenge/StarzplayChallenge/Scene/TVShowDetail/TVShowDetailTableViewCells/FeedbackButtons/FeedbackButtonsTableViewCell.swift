@@ -7,7 +7,10 @@
 
 import UIKit
 
-class FeedbackButtonsTableViewCell: UITableViewCell {
+class FeedbackButtonsTableViewCell: UITableViewCell, CellViewInitializable {
+    @IBOutlet weak var wishlistButton: UIButton!
+    @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var dislikeButton: UIButton!
 
     //MARK: Properties
     var viewModel: FeedbackButtonsTableViewCellViewModelType!
@@ -31,13 +34,32 @@ class FeedbackButtonsTableViewCell: UITableViewCell {
     
     private func commonInit() {
         selectionStyle = .none
+        
     }
     
     //MARK: Configure Cellview
     
     func configure(with viewModel:FeedbackButtonsTableViewCellViewModelType) {
         self.viewModel = viewModel
+        
+        wishlistButton.roundedButton()
+        likeButton.roundedButton()
+        dislikeButton.roundedButton()
+       
         //binding()
     }
     
+}
+
+extension UIButton {
+
+    func roundedButton(){
+    let maskPath = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: [.bottomRight , .topRight, .bottomLeft, .topLeft],
+                                cornerRadii:CGSize(width:23, height:23))
+    let maskLayer = CAShapeLayer()
+    maskLayer.frame = self.bounds
+    maskLayer.path = maskPath.cgPath
+    self.layer.mask = maskLayer
+    }
 }
