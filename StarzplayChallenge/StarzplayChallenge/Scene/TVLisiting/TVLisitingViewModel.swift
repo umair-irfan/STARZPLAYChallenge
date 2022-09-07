@@ -16,6 +16,7 @@ protocol TVLisitingViewModelType {
     func generateCellViewModels()
     var reloadTableViewClosure: (()->())? { get set }
     var navigateToDetailClosure: ((Show)->())? { get set }
+    var cellViewModels : [TVShowsTableViewCellViewModelType]? { get }
 }
 
 class TVLisitingViewModel: TVLisitingViewModelType {
@@ -23,7 +24,7 @@ class TVLisitingViewModel: TVLisitingViewModelType {
     //MARK: Properties
     private var tvShows = [Show]()
     private var repository: TVRepositoryType!
-    lazy var cellViewModels : [TVShowsTableViewCellViewModelType]? = [TVShowsTableViewCellViewModelType]()
+    private(set) lazy var cellViewModels : [TVShowsTableViewCellViewModelType]? = [TVShowsTableViewCellViewModelType]()
     var reloadTableViewClosure: (()->())?
     var navigateToDetailClosure: ((Show)->())?
     

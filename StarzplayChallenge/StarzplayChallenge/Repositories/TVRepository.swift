@@ -35,7 +35,7 @@ class TVRepository: NetworkService, TVRepositoryType {
 
 class MockTVRepository: TVRepositoryType {
     func discoverTVShows(onCompletion: @escaping (Result<TV?, AppError>) -> ()) {
-        
+        onCompletion(.success(TV.mockedData))
     }
     
     func fetchTVShowDetails(showId: Int, onCompletion: @escaping(Result<ShowDetail?, AppError>)->()){
@@ -47,6 +47,5 @@ class MockTVRepository: TVRepositoryType {
     }
     
     func fetchEpisodeDetails(tvId: Int, seasonId: Int, episodeId: Int,onCompletion: @escaping(Result<EpisodeDetail?, AppError>)->()) {
-        
     }
 }

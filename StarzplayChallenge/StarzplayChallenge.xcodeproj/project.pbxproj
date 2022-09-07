@@ -11,12 +11,12 @@
 		7C067B3228C87898007619FC /* EpisodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3128C87898007619FC /* EpisodeRequest.swift */; };
 		7C067B3428C8C434007619FC /* SeasonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3328C8C433007619FC /* SeasonDetail.swift */; };
 		7C067B3628C8C48C007619FC /* EpisodeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3528C8C48C007619FC /* EpisodeDetail.swift */; };
+		7C067B3B28C8F011007619FC /* TVLisitingViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3A28C8F011007619FC /* TVLisitingViewModelTest.swift */; };
 		7C11B81628C0E06F0066EE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81528C0E06F0066EE64 /* AppDelegate.swift */; };
 		7C11B81828C0E06F0066EE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */; };
 		7C11B81D28C0E06F0066EE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C11B81B28C0E06F0066EE64 /* Main.storyboard */; };
 		7C11B81F28C0E0710066EE64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C11B81E28C0E0710066EE64 /* Assets.xcassets */; };
 		7C11B82228C0E0710066EE64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C11B82028C0E0710066EE64 /* LaunchScreen.storyboard */; };
-		7C11B82D28C0E0710066EE64 /* StarzplayChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B82C28C0E0710066EE64 /* StarzplayChallengeTests.swift */; };
 		7C11B83728C0E0710066EE64 /* StarzplayChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B83628C0E0710066EE64 /* StarzplayChallengeUITests.swift */; };
 		7C11B83928C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B83828C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift */; };
 		7C3E0E2628C5E19D00ED690B /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3E0E2528C5E19D00ED690B /* NetworkService.swift */; };
@@ -91,6 +91,7 @@
 		7C067B3128C87898007619FC /* EpisodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRequest.swift; sourceTree = "<group>"; };
 		7C067B3328C8C433007619FC /* SeasonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetail.swift; sourceTree = "<group>"; };
 		7C067B3528C8C48C007619FC /* EpisodeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetail.swift; sourceTree = "<group>"; };
+		7C067B3A28C8F011007619FC /* TVLisitingViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVLisitingViewModelTest.swift; sourceTree = "<group>"; };
 		7C11B81228C0E06F0066EE64 /* StarzplayChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarzplayChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11B81528C0E06F0066EE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +100,6 @@
 		7C11B82128C0E0710066EE64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C11B82328C0E0710066EE64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7C11B82828C0E0710066EE64 /* StarzplayChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarzplayChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7C11B82C28C0E0710066EE64 /* StarzplayChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarzplayChallengeTests.swift; sourceTree = "<group>"; };
 		7C11B83228C0E0710066EE64 /* StarzplayChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StarzplayChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11B83628C0E0710066EE64 /* StarzplayChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarzplayChallengeUITests.swift; sourceTree = "<group>"; };
 		7C11B83828C0E0710066EE64 /* StarzplayChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarzplayChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -239,7 +239,7 @@
 		7C11B82B28C0E0710066EE64 /* StarzplayChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				7C11B82C28C0E0710066EE64 /* StarzplayChallengeTests.swift */,
+				7C067B3A28C8F011007619FC /* TVLisitingViewModelTest.swift */,
 			);
 			path = StarzplayChallengeTests;
 			sourceTree = "<group>";
@@ -557,6 +557,7 @@
 					};
 					7C11B82728C0E0710066EE64 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = 7C11B81128C0E06F0066EE64;
 					};
 					7C11B83128C0E0710066EE64 = {
@@ -776,7 +777,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C11B82D28C0E0710066EE64 /* StarzplayChallengeTests.swift in Sources */,
+				7C067B3B28C8F011007619FC /* TVLisitingViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,15 +1009,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQ6A477B6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplodig.StarzplayChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StarzplayChallenge.app/StarzplayChallenge";
@@ -1029,11 +1037,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PQ6A477B6S;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xplodig.StarzplayChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -61,3 +61,12 @@ extension Show: Codable {
         voteCount = try container.decode(Int.self, forKey: .voteCount)
     }
 }
+
+
+extension TV {
+    static var mocked: [Show] {
+        return [Show(id: 0, name: "Umair Irfan's Demo", originalName: "Demo Star Play", overview: "This is the demo of unit test for STARZ Play Challenge", popularity: 99.0, voteAverage: 7.8, voteCount: 100), Show(id: 1, name: "Peer Review", originalName: "Demo Peer Review", overview: "This is the peer review of the Challenge", popularity: 95.0, voteAverage: 8.0, voteCount: 91)]
+    }
+    
+    static var mockedData: TV = TV(page: 1, shows: mocked, totalPages: 1, totalResults: 2)
+}
