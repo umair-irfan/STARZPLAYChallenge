@@ -74,7 +74,7 @@ extension SceneDelegate {
         let viewModel: TVShowDetailViewModelType = TVShowDetailViewModel(with: repo,show: show)
         let viewController = TVShowDetailViewController.initFrom(storyboard: .main)
         viewController.viewModel = viewModel
-        root.pushViewController(viewController, animated: true)
+        root.pushViewController(viewController, animated: false)
     }
 }
 

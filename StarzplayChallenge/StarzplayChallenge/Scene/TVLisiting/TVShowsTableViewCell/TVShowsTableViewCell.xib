@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,34 +21,51 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgR-nj-D0V">
                         <rect key="frame" x="20" y="5" width="42" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-v9-c7N">
                         <rect key="frame" x="20" y="30.5" width="290" height="38.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m0W-T2-fpc">
                         <rect key="frame" x="269.5" y="5" width="35.5" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36x-qP-ytU">
+                        <rect key="frame" x="20" y="78" width="280" height="1"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="ZHf-ye-cal"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" systemColor="secondaryLabelColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="dTY-v9-c7N" secondAttribute="trailing" constant="10" id="8Jw-YR-G4Q"/>
                     <constraint firstAttribute="trailing" secondItem="m0W-T2-fpc" secondAttribute="trailing" constant="15" id="BBE-9K-6ME"/>
                     <constraint firstItem="dTY-v9-c7N" firstAttribute="leading" secondItem="WgR-nj-D0V" secondAttribute="leading" id="DuC-Fa-Cgk"/>
                     <constraint firstItem="m0W-T2-fpc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Rac-hD-qA2"/>
+                    <constraint firstAttribute="trailing" secondItem="36x-qP-ytU" secondAttribute="trailing" constant="20" id="WFL-Gm-fgy"/>
                     <constraint firstItem="dTY-v9-c7N" firstAttribute="top" secondItem="WgR-nj-D0V" secondAttribute="bottom" constant="5" id="WXj-v2-h9B"/>
                     <constraint firstItem="WgR-nj-D0V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Xc2-Gh-1qx"/>
                     <constraint firstAttribute="bottom" secondItem="dTY-v9-c7N" secondAttribute="bottom" constant="10" id="a4l-3q-36I"/>
+                    <constraint firstItem="36x-qP-ytU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="kiz-OY-1H1"/>
+                    <constraint firstItem="dTY-v9-c7N" firstAttribute="leading" secondItem="36x-qP-ytU" secondAttribute="trailing" constant="-280" id="sgI-M7-Nqp"/>
+                    <constraint firstAttribute="bottom" secondItem="36x-qP-ytU" secondAttribute="bottom" id="vDz-vC-HXG"/>
+                    <constraint firstItem="dTY-v9-c7N" firstAttribute="leading" secondItem="36x-qP-ytU" secondAttribute="trailing" constant="-280" id="vax-or-v7Z"/>
                     <constraint firstItem="WgR-nj-D0V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="wnR-gI-gAO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" systemColor="secondaryLabelColor"/>
             <connections>
                 <outlet property="overViewLabel" destination="dTY-v9-c7N" id="ZUz-Hj-yIw"/>
                 <outlet property="ratingLabel" destination="m0W-T2-fpc" id="bli-qf-069"/>
@@ -56,4 +74,9 @@
             <point key="canvasLocation" x="137.68115942028987" y="104.12946428571428"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

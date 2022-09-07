@@ -33,7 +33,7 @@ extension UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
         button.setImage(UIImage(named: "icon_back", in: CoreBundel, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(onTapBackButton), for: .touchUpInside)
         
@@ -52,7 +52,7 @@ extension UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
         button.setImage(UIImage(named: "icon_search")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(onTapSeachButton), for: .touchUpInside)
         
@@ -69,7 +69,7 @@ extension UIViewController {
         button.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
         button.setImage(UIImage(named: "icon_search")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.tintColor = .black
+        button.tintColor = .white
         button.backgroundColor = .clear
         button.addTarget(self, action: #selector(onTapSeachButton), for: .touchUpInside)
         
@@ -82,7 +82,7 @@ extension UIViewController {
         buttonBack.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         
         buttonBack.setImage(UIImage(named: "icon_back", in: CoreBundel, compatibleWith: nil)?.withRenderingMode(.alwaysTemplate), for: .normal)
-        buttonBack.tintColor = .black
+        buttonBack.tintColor = .white
         buttonBack.backgroundColor = .clear
         buttonBack.addTarget(self, action: #selector(onTapBackButton), for: .touchUpInside)
         
