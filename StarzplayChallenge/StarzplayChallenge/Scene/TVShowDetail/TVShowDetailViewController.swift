@@ -18,6 +18,7 @@ class TVShowDetailViewController: UIViewController, StoryboardInitializable {
         super.viewDidLoad()
         setupView()
         bindViewModel()
+        viewModel.requestTVShowDetails()
     }
 
 }
@@ -66,6 +67,9 @@ extension TVShowDetailViewController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return viewModel.tableViewNumberOfRowsForStaticSection()
+        }
+        if section == 1 {
+            return 1
         }else {
             return viewModel.tableViewNumberOfRowsForEpisodeSection()
         }
@@ -96,18 +100,17 @@ extension TVShowDetailViewController: UITableViewDataSource, UITableViewDelegate
                 cell.configure(with: cellViewModel)
                 return cell
             }
+        }
+        if indexPath.section == 1 {
+            guard let cellViewModel = viewModel.seasonsTableViewCellForRowAt(for: indexPath) else { return UITableViewCell.init() }
+            let cell = SeasonsTableViewCell.dequeueReuseableCell(tableView: tableView)
+            cell.configure(with: cellViewModel)
+            return cell
         }else {
-            if indexPath.row == 0 {
-                guard let cellViewModel = viewModel.seasonsTableViewCellForRowAt(for: indexPath) else { return UITableViewCell.init() }
-                let cell = SeasonsTableViewCell.dequeueReuseableCell(tableView: tableView)
-                cell.configure(with: cellViewModel)
-                return cell
-            }else {
-                guard let cellViewModel = viewModel.episodesTableViewCellForRowAt(for: indexPath) else { return UITableViewCell.init() }
-                let cell = EpisodesTableViewCell.dequeueReuseableCell(tableView: tableView)
-                cell.configure(with: cellViewModel)
-                return cell
-            }
+            guard let cellViewModel = viewModel.episodesTableViewCellForRowAt(for: indexPath) else { return UITableViewCell.init() }
+            let cell = EpisodesTableViewCell.dequeueReuseableCell(tableView: tableView)
+            cell.configure(with: cellViewModel)
+            return cell
         }
     }
     

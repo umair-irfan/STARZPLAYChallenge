@@ -8,6 +8,8 @@
 import UIKit
 
 class EpisodesTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    @IBOutlet weak var episodeNameLabel: UILabel!
 
     //MARK: Properties
     var viewModel: EpisodesTableViewCellViewModelType!
@@ -38,7 +40,13 @@ class EpisodesTableViewCell: UITableViewCell, CellViewInitializable {
     
     func configure(with viewModel:EpisodesTableViewCellViewModelType) {
         self.viewModel = viewModel
-        //binding()
+        binding()
     }
     
+}
+
+extension EpisodesTableViewCell {
+    func binding(){
+        episodeNameLabel.text = viewModel.episodeName()
+    }
 }

@@ -9,6 +9,9 @@ import UIKit
 
 class HeaderImageTableViewCell: UITableViewCell, CellViewInitializable {
     
+    @IBOutlet weak var showNameLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
+    
     //MARK: Properties
     
     private var viewModel: HeaderImageTableViewCellViewModelType!
@@ -38,7 +41,14 @@ class HeaderImageTableViewCell: UITableViewCell, CellViewInitializable {
     
     func configure(with viewModel:HeaderImageTableViewCellViewModelType) {
         self.viewModel = viewModel
-        //binding()
+        binding()
     }
     
+}
+
+extension HeaderImageTableViewCell {
+    func binding(){
+        showNameLabel.text  = viewModel.showName()
+        rateLabel.text = viewModel.rate()
+    }
 }

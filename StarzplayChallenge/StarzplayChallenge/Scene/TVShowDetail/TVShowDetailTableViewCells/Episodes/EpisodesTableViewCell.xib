@@ -17,8 +17,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="462" height="118"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrowtriangle.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="edb-OG-Uc4">
-                        <rect key="frame" x="10" y="44" width="26" height="21.5"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron.compact.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="edb-OG-Uc4">
+                        <rect key="frame" x="10" y="43.5" width="26" height="23"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="AlW-iS-xh7"/>
                             <constraint firstAttribute="width" constant="26" id="oQp-EJ-fGI"/>
@@ -26,20 +27,21 @@
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u0T-dx-f14">
                         <rect key="frame" x="51" y="10" width="130" height="90"/>
-                        <color key="backgroundColor" red="0.81960784310000001" green="0.41568627450000001" blue="0.52941176469999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="90" id="jkr-nZ-WPf"/>
                             <constraint firstAttribute="width" constant="130" id="yn7-IX-Qk5"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Episode Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pga-JE-Qmm">
-                        <rect key="frame" x="196" y="45" width="205" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <rect key="frame" x="196" y="46" width="205" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icloud.and.arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-j7-hSZ">
-                        <rect key="frame" x="421" y="42" width="26" height="27"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tpT-j7-hSZ">
+                        <rect key="frame" x="421" y="42.5" width="26" height="25"/>
+                        <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="26" id="U0M-Bz-B3C"/>
                             <constraint firstAttribute="height" constant="26" id="wfV-Ek-6TU"/>
@@ -60,11 +62,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="episodeNameLabel" destination="Pga-JE-Qmm" id="YWB-fs-9rx"/>
+            </connections>
             <point key="canvasLocation" x="239.13043478260872" y="122.54464285714285"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="arrowtriangle.right" catalog="system" width="128" height="113"/>
-        <image name="icloud.and.arrow.down" catalog="system" width="128" height="112"/>
+        <image name="arrow.down.circle" catalog="system" width="128" height="121"/>
+        <image name="chevron.compact.right" catalog="system" width="64" height="128"/>
     </resources>
 </document>

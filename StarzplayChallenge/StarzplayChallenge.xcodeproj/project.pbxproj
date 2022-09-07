@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5107A04A510690AD5D3AB724 /* Pods_StarzplayChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A608240EF5F40C7C4520DA79 /* Pods_StarzplayChallengeTests.framework */; };
+		7C067B3228C87898007619FC /* EpisodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3128C87898007619FC /* EpisodeRequest.swift */; };
+		7C067B3428C8C434007619FC /* SeasonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3328C8C433007619FC /* SeasonDetail.swift */; };
+		7C067B3628C8C48C007619FC /* EpisodeDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C067B3528C8C48C007619FC /* EpisodeDetail.swift */; };
 		7C11B81628C0E06F0066EE64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81528C0E06F0066EE64 /* AppDelegate.swift */; };
 		7C11B81828C0E06F0066EE64 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */; };
 		7C11B81D28C0E06F0066EE64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C11B81B28C0E06F0066EE64 /* Main.storyboard */; };
@@ -43,7 +46,6 @@
 		7CF1594B28C21F9C00EEE5CB /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF1594A28C21F9C00EEE5CB /* Router.swift */; };
 		7CF1594E28C22B1400EEE5CB /* TVShowService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF1594D28C22B1400EEE5CB /* TVShowService.swift */; };
 		7CF1595128C2356100EEE5CB /* TVShow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF1595028C2356100EEE5CB /* TVShow.swift */; };
-		7CF1595428C235A300EEE5CB /* TVShowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF1595328C235A300EEE5CB /* TVShowRequest.swift */; };
 		7CF1595928C2369900EEE5CB /* SeasonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF1595828C2369900EEE5CB /* SeasonRequest.swift */; };
 		7CF8220528C673CD0090136F /* TVShowDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8220428C673CD0090136F /* TVShowDetailViewModel.swift */; };
 		7CF8220A28C678F70090136F /* UINavigationControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8220928C678F70090136F /* UINavigationControllerFactory.swift */; };
@@ -86,6 +88,9 @@
 		06D55D1519D0EAD37DCF60BE /* Pods-StarzplayChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-StarzplayChallengeTests/Pods-StarzplayChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		1DE2CC78549FF0E926E60593 /* Pods-StarzplayChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-StarzplayChallengeTests/Pods-StarzplayChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6958629705A4C2FF2BAEC8CD /* Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-StarzplayChallenge-StarzplayChallengeUITests/Pods-StarzplayChallenge-StarzplayChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7C067B3128C87898007619FC /* EpisodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeRequest.swift; sourceTree = "<group>"; };
+		7C067B3328C8C433007619FC /* SeasonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetail.swift; sourceTree = "<group>"; };
+		7C067B3528C8C48C007619FC /* EpisodeDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetail.swift; sourceTree = "<group>"; };
 		7C11B81228C0E06F0066EE64 /* StarzplayChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarzplayChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C11B81528C0E06F0066EE64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C11B81728C0E06F0066EE64 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,7 +130,6 @@
 		7CF1594A28C21F9C00EEE5CB /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		7CF1594D28C22B1400EEE5CB /* TVShowService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowService.swift; sourceTree = "<group>"; };
 		7CF1595028C2356100EEE5CB /* TVShow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShow.swift; sourceTree = "<group>"; };
-		7CF1595328C235A300EEE5CB /* TVShowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowRequest.swift; sourceTree = "<group>"; };
 		7CF1595828C2369900EEE5CB /* SeasonRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonRequest.swift; sourceTree = "<group>"; };
 		7CF8220428C673CD0090136F /* TVShowDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowDetailViewModel.swift; sourceTree = "<group>"; };
 		7CF8220928C678F70090136F /* UINavigationControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerFactory.swift; sourceTree = "<group>"; };
@@ -359,6 +363,8 @@
 			children = (
 				7CF1595028C2356100EEE5CB /* TVShow.swift */,
 				7C3E0E3E28C642AD00ED690B /* ShowDetail.swift */,
+				7C067B3328C8C433007619FC /* SeasonDetail.swift */,
+				7C067B3528C8C48C007619FC /* EpisodeDetail.swift */,
 				7CF1594628C2138400EEE5CB /* AppError.swift */,
 			);
 			path = Model;
@@ -367,8 +373,8 @@
 		7CF1595528C235A800EEE5CB /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				7CF1595328C235A300EEE5CB /* TVShowRequest.swift */,
 				7CF1595828C2369900EEE5CB /* SeasonRequest.swift */,
+				7C067B3128C87898007619FC /* EpisodeRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -735,10 +741,10 @@
 				7C3E0E3F28C642AD00ED690B /* ShowDetail.swift in Sources */,
 				7CF1594E28C22B1400EEE5CB /* TVShowService.swift in Sources */,
 				7CF8221E28C689FF0090136F /* PlayButtonsTableViewCellViewModel.swift in Sources */,
+				7C067B3628C8C48C007619FC /* EpisodeDetail.swift in Sources */,
 				7C3E0E2D28C62AB300ED690B /* TVLisitingViewModel.swift in Sources */,
 				7CF8222C28C696EB0090136F /* FeedbackButtonsTableViewCellViewModel.swift in Sources */,
 				7CF1594928C21E8000EEE5CB /* Reachability.swift in Sources */,
-				7CF1595428C235A300EEE5CB /* TVShowRequest.swift in Sources */,
 				7CF8222528C692230090136F /* DescriptionTableViewCellViewModel.swift in Sources */,
 				7CCBD43328C7EEB300F38FCE /* SeasonsTableViewCell.swift in Sources */,
 				7CF8220528C673CD0090136F /* TVShowDetailViewModel.swift in Sources */,
@@ -750,11 +756,13 @@
 				7CF8220A28C678F70090136F /* UINavigationControllerFactory.swift in Sources */,
 				7C3E0E3728C62E5200ED690B /* TVShowsTableViewCell.swift in Sources */,
 				7C3E0E3A28C62E8700ED690B /* TVShowsTableViewCellViewModel.swift in Sources */,
+				7C067B3228C87898007619FC /* EpisodeRequest.swift in Sources */,
 				7CCBD43A28C7F37D00F38FCE /* EpisodesTableViewCell.swift in Sources */,
 				7C3E0E2628C5E19D00ED690B /* NetworkService.swift in Sources */,
 				7C3E0E2F28C62B0E00ED690B /* Storyboard+Extension.swift in Sources */,
 				7CF1594B28C21F9C00EEE5CB /* Router.swift in Sources */,
 				7C3E0E4128C6437D00ED690B /* TVShowDetailViewController.swift in Sources */,
+				7C067B3428C8C434007619FC /* SeasonDetail.swift in Sources */,
 				7CCBD43728C7EF2800F38FCE /* SeasonsTableViewCellViewModel.swift in Sources */,
 				7CF1594728C2138400EEE5CB /* AppError.swift in Sources */,
 				7C3E0E2828C5F18B00ED690B /* TVRepository.swift in Sources */,

@@ -8,9 +8,17 @@
 import Foundation
 
 protocol EpisodesTableViewCellViewModelType {
-    
+    func episodeName() -> String
 }
 
 class EpisodesTableViewCellViewModel: EpisodesTableViewCellViewModelType {
+    
+    var episode: Episode!
+    
+    init(with episode: Episode) {
+        self.episode = episode
+    }
+    
+    func episodeName() -> String { self.episode.name }
     
 }

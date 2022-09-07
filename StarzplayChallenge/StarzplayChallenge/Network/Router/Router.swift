@@ -46,12 +46,12 @@ enum Router<T>: URLRequestConverted {
             return "/3/discover/tv"
         case .getTVShowDetails(let id):
             return  "/3/tv/\(id)"
-        case .getSeasonDetails:
-            //MARK:- Fix request endpoint
-            return  "/tv"
-        case .getEpisodeDetails:
-            //MARK:- Fix request endpoint
-            return  "/tv"
+        case .getSeasonDetails(let params):
+            let request = params as! SeasonRequest
+            return  "/3/tv/\(request.tvId)/season/\(request.seasonId)"
+        case .getEpisodeDetails(let params):
+            let request = params as! EpisodeRequest
+            return  "/3/tv/\(request.tvId)/season/\(request.seasonId)/episode/\(request.episodeId)"
             
         }
     }
@@ -63,22 +63,8 @@ enum Router<T>: URLRequestConverted {
     }
     private var queryParameters: [URLQueryItem]? {
         switch self {
-        case .discoverTVShows:
+        case .discoverTVShows, .getTVShowDetails, .getSeasonDetails, .getEpisodeDetails:
             return [URLQueryItem(name: "api_key", value: String(Keys.movieDb))]
-            
-        case .getTVShowDetails:
-            return [URLQueryItem(name: "api_key", value: String(Keys.movieDb))]
-            
-        case .getSeasonDetails(let params):
-            //MARK:- Fix request type
-            let request = params as! SeasonRequest
-            return [URLQueryItem(name: "language", value: String(request.language)),
-                    URLQueryItem(name: "since", value: String(request.since))]
-        case .getEpisodeDetails(let params):
-            //MARK:- Fix request type
-            let request = params as! TVShowRequest
-            return [URLQueryItem(name: "language", value: String(request.language)),
-                    URLQueryItem(name: "since", value: String(request.since))]
         }
     }
     

@@ -50,12 +50,12 @@ class SeasonsTableViewCell: UITableViewCell, CellViewInitializable {
 
 extension SeasonsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return  viewModel.numberOfSeasons()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "SeasonNameCollectionViewCell", for: indexPath) as! SeasonNameCollectionViewCell
-       cell.configure(with: SeasonNameCollectionViewCellViewModel(with: "Season 1"))
+        cell.configure(with: SeasonNameCollectionViewCellViewModel(with: viewModel.seasonName(for: indexPath)))
        return  cell
     }
 }

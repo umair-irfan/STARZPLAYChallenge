@@ -8,6 +8,6 @@
 import Foundation
 
 struct SeasonRequest {
-    let since : String
-    let language: String
+    let tvId : Int
+    let seasonId: Int
 }
