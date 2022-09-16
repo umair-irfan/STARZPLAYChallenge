@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import UICore
 
 class FeedbackButtonsTableViewCell: UITableViewCell, CellViewInitializable {
+   
+    static var reuseableIdentifier: String = "FeedbackButtonsTableViewCell"
+    
     @IBOutlet weak var wishlistButton: UIButton!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var dislikeButton: UIButton!

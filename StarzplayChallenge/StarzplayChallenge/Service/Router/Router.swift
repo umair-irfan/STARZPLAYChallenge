@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UINetworking
 
 struct Keys: Codable {
     static var movieDb = Bundle.main.object(forInfoDictionaryKey: "api_key") as! String
@@ -15,11 +16,7 @@ struct DevelopmentServer {
     static var host = "api.themoviedb.org"
 }
 
-public protocol URLRequestConverted {
-    func urlRequest()  -> URLRequest?
-}
-
-enum Router<T>: URLRequestConverted {
+enum Router<T>: URLRequestConvertable {
     
     case discoverTVShows(T)
     case getTVShowDetails(T)

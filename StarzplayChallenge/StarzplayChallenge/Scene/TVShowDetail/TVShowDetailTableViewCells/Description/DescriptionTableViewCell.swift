@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import UICore
 
 class DescriptionTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    static var reuseableIdentifier: String = "DescriptionTableViewCell"
+    
     
     //MARK: View
     @IBOutlet weak var descLabel: UILabel!

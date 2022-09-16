@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import UICore
 
 class TVShowsTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    static var reuseableIdentifier: String = "TVShowsTableViewCell"
     
     @IBOutlet weak var showNameLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!

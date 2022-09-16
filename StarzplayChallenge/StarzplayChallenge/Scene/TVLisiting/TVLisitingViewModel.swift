@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 protocol TVLisitingViewModelType {
     func getScreenTitle() -> String
     func tableViewCellForRowAt(for indexPath: IndexPath) -> TVShowsTableViewCellViewModelType?
@@ -23,7 +24,7 @@ class TVLisitingViewModel: TVLisitingViewModelType {
     
     //MARK: Properties
     private var tvShows = [Show]()
-    private var repository: TVRepositoryType!
+    private var repository: TVRepositoryType = TVRepository()
     private(set) lazy var cellViewModels : [TVShowsTableViewCellViewModelType]? = [TVShowsTableViewCellViewModelType]()
     var reloadTableViewClosure: (()->())?
     var navigateToDetailClosure: ((Show)->())?
@@ -68,7 +69,7 @@ extension TVLisitingViewModel {
                     self.generateCellViewModels()
                 }
             case .failure(let err):
-                print(err.error)
+                print(err.localizedDescription)
             }
         }
     }

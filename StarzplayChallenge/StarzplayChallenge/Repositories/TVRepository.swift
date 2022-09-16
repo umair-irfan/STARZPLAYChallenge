@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UINetworking
 
 protocol TVRepositoryType {
     func discoverTVShows(onCompletion: @escaping(Result<TV?, AppError>)->())

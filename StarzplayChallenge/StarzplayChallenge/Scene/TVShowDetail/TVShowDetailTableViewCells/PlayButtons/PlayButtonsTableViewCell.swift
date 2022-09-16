@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import UICore
 
 class PlayButtonsTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    static var reuseableIdentifier: String = "PlayButtonsTableViewCell"
     
     //MARK: Properties
     var viewModel: PlayButtonsTableViewCellViewModelType!

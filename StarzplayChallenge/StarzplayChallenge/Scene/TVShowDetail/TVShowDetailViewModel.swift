@@ -104,7 +104,7 @@ extension TVShowDetailViewModel {
                     }
                 }
             case .failure(let err):
-                print(err.error)
+                print(err.localizedDescription)
             }
         }
     }
@@ -121,7 +121,7 @@ extension TVShowDetailViewModel {
                     }
                 }
             case .failure(let err):
-                print(err.error)
+                print(err.localizedDescription)
             }
         }
     }

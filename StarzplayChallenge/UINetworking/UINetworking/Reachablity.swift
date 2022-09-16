@@ -1,8 +1,8 @@
 //
-//  Reachability.swift
-//  StarzplayChallenge
+//  Reachablity.swift
+//  UINetworking
 //
-//  Created by Umair Irfan on 02/09/2022.
+//  Created by Umair Irfan on 16/09/2022.
 //
 
 import Foundation

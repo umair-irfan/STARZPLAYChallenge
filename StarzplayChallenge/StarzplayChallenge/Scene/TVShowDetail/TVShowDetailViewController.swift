@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UICore
 
 class TVShowDetailViewController: UIViewController, StoryboardInitializable {
     

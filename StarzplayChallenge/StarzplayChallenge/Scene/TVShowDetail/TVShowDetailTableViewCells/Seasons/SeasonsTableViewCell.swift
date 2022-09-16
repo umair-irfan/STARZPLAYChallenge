@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import UICore
 
 class SeasonsTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    static var reuseableIdentifier: String = "SeasonsTableViewCell"
+    
     
     @IBOutlet weak var seasonCollectionView: UICollectionView!
 

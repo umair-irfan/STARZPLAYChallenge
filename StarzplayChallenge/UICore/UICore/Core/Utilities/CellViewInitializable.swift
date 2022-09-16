@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-protocol CellViewInitializable {
+
+public protocol CellViewInitializable {
     static var reuseableIdentifier: String { get }
 }
 
@@ -17,7 +18,7 @@ extension CellViewInitializable where Self: UITableViewCell {
         return String(describing: Self.self)
     }
     
-    static func dequeueReuseableCell(tableView: UITableView) -> Self {
+    public static func dequeueReuseableCell(tableView: UITableView) -> Self {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: self.reuseableIdentifier) else {
             return UITableViewCell() as! Self
         }

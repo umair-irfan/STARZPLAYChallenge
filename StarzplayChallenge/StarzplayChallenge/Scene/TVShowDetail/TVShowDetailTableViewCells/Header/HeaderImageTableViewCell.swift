@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import UICore
 
 class HeaderImageTableViewCell: UITableViewCell, CellViewInitializable {
+    
+    static var reuseableIdentifier: String = "HeaderImageTableViewCell"
+    
     
     @IBOutlet weak var showNameLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!

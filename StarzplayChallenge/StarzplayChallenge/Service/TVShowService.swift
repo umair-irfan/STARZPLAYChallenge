@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UINetworking
 
 protocol TVShowServiceType {
     func fetchTVShows(completion: @escaping(Result<TV?,AppError>) -> Void)
@@ -18,7 +19,7 @@ class TVShowService:ApiClient, TVShowServiceType {
     
     func fetchTVShows(completion: @escaping(Result<TV?,AppError>) -> Void) {
         let router = Router.discoverTVShows(Int.self)
-        request(router: router) { (result:Result<TV, AppError>) in
+        request(router: router) { (result: Result<TV, AppError>) in
             switch result{
             case .failure(let error):
                 //MARK: Network Service Logs here

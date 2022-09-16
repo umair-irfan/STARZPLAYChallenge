@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import UICore
 
 class EpisodesTableViewCell: UITableViewCell, CellViewInitializable {
+   
+    static var reuseableIdentifier: String = "EpisodesTableViewCell"
+    
     
     @IBOutlet weak var episodeNameLabel: UILabel!
 
